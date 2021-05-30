@@ -1,24 +1,30 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Pacman voice commands</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  </head>
-  <body>
-    <div class="container">
-      <h3>SCORE:<span id="score">0</span></h3>
-      <div class="grid"></div>
-      <button id="start-button">Start</button>
-      <h4>OR SAY 'START' AFTER PRESSING THE MICROPHONE.</h4> 
-      <h4>SAY 'LEFT', 'RIGHT', 'UP' and 'DOWN' TO MOVE PACMAN</h4>
-      <div class="alan-btn"></div>
-    </div>
-    
-    <script type="text/javascript"
-    src="https://studio.alan.app/web/lib/alan_lib.js"></script>
-    <script type="text/javascript" src="app.js" charset="utf-8"></script>
-  </body>
-</html>
+<html>
+    <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <script type="text/javascript" src="https://speechly.github.io/browser-ui/v1/push-to-talk-button.js"></script>
+      <script type="text/javascript" src="https://speechly.github.io/browser-ui/v1/big-transcript.js"></script>
+      <link rel="stylesheet" href="https://speechly.github.io/browser-ui/v1/speechly-ui.css">
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Permanent+Marker">
+
+
+      <link rel="stylesheet" href="style.css">
+
+    </head>
+    <body>
+      <div id="shim">shim for font face</div>
+  
+      <h1>Speechly Pacman</h1>
+      <div id="pacman"></div>
+      <div class="PushToTalkContainer">
+        <push-to-talk-button appid="4013ed4d-c27a-4937-9303-2aba66976cb2" capturekey=" "/>
+      </div>
+  
+      <div class="BigTranscriptContainer">
+        <big-transcript></big-transcript>
+      </div>
+      <script src="new_script.js"></script>
+    </body>
+  </html>
